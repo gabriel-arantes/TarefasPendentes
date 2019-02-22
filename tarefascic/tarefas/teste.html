@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tarefas pendentes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Anton|Bree+Serif|Roboto:100,300i,400" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F8F8;
+        }
+        
+        h1  {
+            font-size: 50px;
+            margin-bottom: 1px;
+        }
+        
+        h2 {
+            font-size: 35px;
+            font-weight: 300;
+            margin-top: 0;
+            font-weight: 400
+        }
+        
+        h3 {
+            margin-top: 3px;
+            font-weight: 400;
+        }
+        
+        .container {
+            background-color: white;
+            padding-bottom: 80px;
+            padding-top: 30px;
+            margin-top: 60px;
+            border-radius: 25px;
+            box-shadow: -3px 3px 18px 8px #E8E8E8;
+        }
+
+        a {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px
+        }
+
+    </style> 
+    
+    
+    <body>   
+    
+        <script type="text/javascript">
+
+        function adicionar() {
+            var trf = document.getElementById("tarfaid").value;
+            var lista = document.getElementById("lista").innerHTML;
+            lista = lista +"<li id='texto' class='list-group-item list-group-item-action list-group-item-success'>" + trf + " <input class='form-check-input' type='checkbox'>" + "</li>";
+            document.getElementById("lista").innerHTML = lista;
+        }
+
+        function remover() {
+            var list = document.getElementById("lista");
+            var item = document.getElementById("itemremove").value;
+            list.removeChild(list.childNodes[item - 1]);
+        }
+
+        function alterar() {
+            var inpureplacep = document.getElementById("itemnew").value;
+            var inputreplace = document.getElementById("itemedit").value;
+            var textnode = document.createTextNode(inputreplace);
+            var item = document.getElementById("lista").childNodes[inpureplacep - 1];
+            item.replaceChild(textnode, item.childNodes[0]);
+        }
+
+        </script>
+
+        <div class="container">
+            <form class="form-inline" role="form">
+                <div class="col-md-7">
+                    <h1><b>Lista de tarefas</b></h1>
+                    <h2 style="font-size: 22px"><i>Vinícius Alves Coutinho - RA 21751012</i></h2>
+                    
+                    <br>
+                    
+                    <h3>Adicionar</h3>
+                    <input type="text" id="tarfaid" class="form-control" placeholder="Nome da tarefa"/>
+                    <button onclick="adicionar()" type="button" class="btn btn-success">Adicionar tarefa</button>
+
+                    <br/><br/>
+
+                    <h3>Remover</h3>    
+                    <input type="text" id="itemremove" class="form-control" placeholder="Número da tarefa"/>
+                    <button onclick="remover()" type="button" class="btn btn-danger">Remover tarefa</button>
+
+                    <br/><br/>
+
+                    <h3>Alterar</h3>
+
+                    <form class="form-horizontal">
+                        <input type="text" id="itemedit" class="form-control" placeholder="Novo nome"/>
+
+                        <input type="text" id="itemnew" class="form-control" placeholder="Número da tarefa"/>
+                        <button onclick="alterar()" type="button" class="btn btn-warning">Alterar tarefa</button>
+                    </form>
+                </div>
+
+            </form>
+
+            <div class="col-md-5 list-group">
+                <h2 style="margin-top: 45px">Tarefas</h2>
+                <a href="#" class="list-group-item">Suas tarefas:</a>
+                <ol id="lista" class="list-group"></ol>
+            </div>
+        </div>
+
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
