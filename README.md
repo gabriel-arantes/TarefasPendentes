@@ -1,14 +1,14 @@
 # Tarefas
     - Para usar basta fazer o download, seguir o caminho "tarefascic/tarefas/" e abrir tarefaspendentes com algum navegador.
     
-# Adicionar tarefa!
+# Adicionar tarefa.
     - Coloque a tarefa desejada no espaço de texto e clique em Adicionar.
 
-# Remover tarefa
+# Remover tarefa.
     - Coloque o número da tarefa a ser removida e clique em remover.
 
-# Alterar tarefa
+# Alterar tarefa.
     - Coloque o novo nome da tarefa no primeiro campo e o número dela no segundo campo, depois clique em Alterar Tarefa.
 
-# Marcar como concluida
+# Marcar como concluida.
     - Clique no checkbox ao lado da tarefa.
