@@ -1,5 +1,6 @@
 # Tarefas
-
+    - Para usar basta fazer o download, seguir o caminho "tarefascic/tarefas/" e clicar em tarefaspendentes.
+    
 # Adicionar tarefa!
     - Coloque a tarefa desejada no espaço de texto e clique em Adicionar.
 
